@@ -7,12 +7,11 @@ def guess_game():
         is user will only have 5 chances given, if the chances run out, its game over. when the user guess a wrong number its going to ask them to guess higher or lower
     """
 
+    computer_guess = random.randrange(1, 100)
     chances = 5
 
     def game(chances):
         guess = input('take a guess: ')
-        computer_guess = random.randrange(1, 100)
-
         if chances > 1:
             try:
                 guess = int(guess)
